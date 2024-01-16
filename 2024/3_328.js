@@ -13,7 +13,22 @@ const { ListNode, getLinkedList } = require("./list_node");
  * @return {ListNode}
  */
 var oddEvenList = function (head) {
-  
+  if (!head) {
+    return null;
+  }
+
+  const evenHead = head.next;
+  let odd = head;
+  let even = head.next;
+
+  while (even && even.next) {
+    odd.next = even.next;
+    odd = odd.next;
+    even.next = odd.next;
+    even = even.next;
+  }
+  odd.next = evenHead;
+  return head;
 };
 
 const l1 = new ListNode(1);

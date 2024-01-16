@@ -10,14 +10,14 @@ var reverseList = function (head) {
   let prev = null;
   let tmp = null;
 
-  while (cur !== null) {
+  while(cur !== null){
     tmp = cur.next;
     cur.next = prev;
     prev = cur;
     cur = tmp;
   }
 
-  getLinkedList(prev);
+  getLinkedList(_head);
 };
 
 const l1 = new ListNode(1);

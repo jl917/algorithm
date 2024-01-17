@@ -1,16 +1,11 @@
 /**
  * @param {string} s
- * @return {string}
+ * @return {number}
  */
-var decodeString = function(s) {
-  const strings = [];
-  const nums = [];
+var calculate = function (s) {
 
 };
 
-
-decodeString('3[a]2[bc]')
-decodeString('3[a2[c]]')
-decodeString('2[abc]3[cd]ef')
-decodeString('abc3[cd]xyz')
-decodeString('12[a]')
+calculate("1 + 1");
+calculate("2-1 + 2");
+calculate("(1+(4+5+2)-3)+(6+8)");

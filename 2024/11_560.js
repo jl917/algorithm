@@ -3,17 +3,6 @@
  * @param {number} k
  * @return {number}
  */
-/**
- * @param {number[]} nums
- * @param {number} k
- * @return {number}
- */
-
-/**
- * @param {number[]} nums
- * @param {number} k
- * @return {number}
- */
 var subarraySum = function (nums, k) {
   const map = new Map([[0, 1]]);
   let count = 0;

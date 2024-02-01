@@ -21,7 +21,6 @@ var permute = function (nums) {
       }
     }
   };
-
   backtracking(0, []);
   return result;
 };

@@ -12,7 +12,6 @@ var permuteUnique = function (nums) {
     if (list.length === nums.length) {
       result.push(list.slice());
     }
-
     for (let i = 0; i < nums.length; i++) {
       if (i !== 0 && nums[i] === nums[i - 1] && used[i - 1] === false) {
         continue;
@@ -27,6 +26,7 @@ var permuteUnique = function (nums) {
       }
     }
   };
+
   backtracking(0, []);
   return result;
 };

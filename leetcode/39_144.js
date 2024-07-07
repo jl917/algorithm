@@ -20,12 +20,6 @@ var preorderTraversal = function (root) {
   return result;
 };
 
-// const t1 = new TreeNode(1);
-// const t2 = new TreeNode(2);
-// const t3 = new TreeNode(3);
-
-// t1.right = t2;
-// t2.left = t3;
 /*
     5
    / \
@@ -48,4 +42,5 @@ t4.right = t2;
 t6.left = t7;
 t6.right = t8;
 
+// 5412678
 console.log(preorderTraversal(t5));

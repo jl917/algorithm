@@ -6,17 +6,21 @@ const { TreeNode } = require("./tree_node");
 
 var postorderTraversal = function (root) {
   const result = [];
+  const stack = [root];
 
-  const traversal = function (node) {
-    if (node === null) {
-      return "";
+  while (stack.length) {
+    const currentItem = stack.pop();
+
+    if (!currentItem) {
+      result.push(stack.pop().val);
+      continue;
     }
+    stack.push(currentItem);
+    stack.push(null);
+    currentItem.right && stack.push(currentItem.right);
+    currentItem.left && stack.push(currentItem.left);
+  }
 
-    traversal(node.left);
-    traversal(node.right);
-    result.push(node.val);
-  };
-  traversal(root);
   return result;
 };
 

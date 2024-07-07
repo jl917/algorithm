@@ -4,19 +4,23 @@ const { TreeNode } = require("./tree_node");
  * @return {number[]}
  */
 
-var postorderTraversal = function (root) {
+var inorderTraversal = function (root) {
   const result = [];
+  const stack = [root];
 
-  const traversal = function (node) {
-    if (node === null) {
-      return "";
+  while (stack.length) {
+    const currentItem = stack.pop();
+
+    if (!currentItem) {
+      result.push(stack.pop().val);
+      continue;
     }
+    currentItem.right && stack.push(currentItem.right);
+    stack.push(currentItem);
+    stack.push(null);
+    currentItem.left && stack.push(currentItem.left);
+  }
 
-    traversal(node.left);
-    traversal(node.right);
-    result.push(node.val);
-  };
-  traversal(root);
   return result;
 };
 
@@ -42,5 +46,5 @@ t4.right = t2;
 t6.left = t7;
 t6.right = t8;
 
-// 1247865
-console.log(postorderTraversal(t5));
+// 1425768
+console.log(inorderTraversal(t5));

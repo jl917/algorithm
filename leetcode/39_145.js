@@ -26,7 +26,13 @@ var postorderTraversal = function (root) {
 
 // t1.right = t2;
 // t2.left = t3;
-
+/*
+    5
+   / \
+  4   6
+ / \ / \
+1  2 7  8
+*/
 const t5 = new TreeNode(5);
 const t4 = new TreeNode(4);
 const t6 = new TreeNode(6);

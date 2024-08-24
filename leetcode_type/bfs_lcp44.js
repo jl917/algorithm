@@ -1,4 +1,4 @@
-const { TreeNode } = require("./leetcode/tree_node");
+const { TreeNode } = require("../leetcode/tree_node");
 /**
  * Definition for a binary tree node.
  * function TreeNode(val) {
